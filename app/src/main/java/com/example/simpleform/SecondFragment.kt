@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.example.simpleform.databinding.FragmentSecondBinding
 
 /**
@@ -32,9 +31,27 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
-        }
+        val fName = arguments?.getString("first_name")
+        val lName = arguments?.getString("last_name")
+        val cName = arguments?.getString("college_name")
+        val isCollege = arguments?.getBoolean("is_college_completed")
+        val isHappy = arguments?.getBoolean("are_you_happy")
+        val gender = arguments?.getString("gender")
+
+//        binding.setFirstName.setText(fName)
+//        binding.setLastName.setText(lName)
+//        binding.setCollegeName.setText(cName)
+//        binding.setGender.setText(gender)
+//        binding.setIsCollegeCompleted.setText(if(isCollege == true){"Yes"} else{"false"})
+//        binding.setAreYouHappy.setText(if(isHappy == true){"Yes"} else{"false"})
+
+        binding.setFirstName.text = fName
+        binding.setLastName.text = lName
+        binding.setCollegeName.text = cName
+        binding.setGender.text = gender
+        binding.setIsCollegeCompleted.text = if(isCollege == true){"Yes"} else{"false"}
+        binding.setAreYouHappy.text = if(isHappy == true){"Yes"} else{"false"}
+
     }
 
     override fun onDestroyView() {

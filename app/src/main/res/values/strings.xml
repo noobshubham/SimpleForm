@@ -20,4 +20,11 @@
     <string name="female">Female</string>
     <string name="clear">Clear</string>
     <string name="save">Save</string>
+    <string name="display_result">Display Result</string>
+    <string name="first_name2">First Name:</string>
+    <string name="last_name2">Last Name:</string>
+    <string name="college2">College:</string>
+    <string name="gender2">Gender:</string>
+    <string name="is_college_completed2">Is College Completed?:</string>
+    <string name="are_you_happy2">Are You Happy?:</string>
 </resources>
